@@ -1,0 +1,23 @@
+.input{
+    display: flex;
+    margin: 10px auto;
+    width: 65%;
+    position: relative;
+    align-items: center;
+}
+
+.input__box{
+    width: 100%;
+    border-radius: 11px;
+    padding: 12px 33px;
+    font-size: 22px;
+    border: none;
+    transition: 0.2s;
+    box-shadow: 0 0 1px black;
+}
+
+.icon{
+    color: #AEA7B4;
+    position: absolute;
+    left: 92%;
+}
