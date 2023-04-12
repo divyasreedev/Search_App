@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import './App.css';
-import SearchBar from './components/searchBar/SearchBar';
+//import SearchBar from './components/searchBar/SearchBar';
+import Home from './components/home/Home';
 
 const App: React.FC = () => {
     return (
-      <div className="App">
-        <SearchBar/>
-      </div>
+      <Fragment>
+        <Home/>
+      </Fragment>
     );
 };
 
