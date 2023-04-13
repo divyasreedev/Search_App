@@ -1,0 +1,30 @@
+.suggestedCard{
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    margin: 10px;
+}
+
+.suggestedCard__img{
+    width:140px;
+    height:177px;
+    border-radius: 3px;
+}
+
+.suggestedCard__p{
+    margin-top: 0;
+    font-size: 12px;
+    font-weight: 300;
+    margin-left: 1px;
+    align-self: flex-start;
+}
+
+@media  screen and (max-width:600px) {
+    .suggestedCard{
+        width: 120px;
+    }
+    .suggestedCard__img{
+        width:120px;
+        height:157px;
+    }
+}

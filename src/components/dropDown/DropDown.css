@@ -1,0 +1,59 @@
+.dropDown {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    margin: 100px auto;
+    padding: 20px 0px;
+    justify-self: center;
+    box-shadow: 0px 0px 40px -10px grey;
+}
+
+.dropDown__imageSection{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /*horizontally*/
+    margin:0px 20px;
+}
+.dropDown__paragraphSection{
+    margin-bottom: 50px;
+    align-self: flex-start;
+    margin-left: 40px;
+}
+h1,h2{
+    font-weight: 600;
+}
+h1{
+    margin-left: 40px;
+    align-self: flex-start;
+    font-size: large;
+}
+h2{
+    font-size: large;
+}
+ul{
+    list-style-type: none;
+    text-align: left;
+}
+li{
+    font-weight: 300;
+    font-size: small;
+}
+
+@media  screen and (max-width:600px) {
+    .dropDown__imageSection{
+        margin: 0;
+    }
+    .dropDown__paragraphSection{
+        align-self: center;
+        margin-left: 0px;
+    }
+    h1{
+        align-self: center;
+        margin-left: 0px;
+    }
+    ul{
+        text-align: center;
+        margin-left: 0px;
+    }
+}

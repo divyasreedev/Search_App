@@ -3,7 +3,8 @@ import './SearchBar.css'
 
 interface props_type{
   setText:(val:string) => void; //function
-  setClick:(val:boolean) => void;
+  // setClick:(val:boolean) => void;
+  setIsVisible:(val:boolean) => void;
 }
 
 const SearchBar = (props:props_type) => {
@@ -18,7 +19,8 @@ const SearchBar = (props:props_type) => {
   }
 
   const handleClick = ():void => {
-    props.setClick(true);
+    // props.setClick(true);
+    props.setIsVisible(true);
   }
   
   return (

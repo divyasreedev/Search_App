@@ -1,9 +1,9 @@
 .input{
     display: flex;
     margin: 0px auto;
-    width: 65%;
+    width: 75%;
     position: relative;
-    align-items: center;
+    align-items: center; /*vertically*/
 }
 
 .input__box{
@@ -20,4 +20,28 @@
     color: #AEA7B4;
     position: absolute;
     left: 92%;
+}
+
+@media  screen and (max-width:600px) {
+    .input{
+        width: 90%
+    }
+    .input__box{
+        padding: 6px 15px;
+    }
+    .icon{
+        left: 88%;
+    }
+}
+
+@media  screen and (min-width:600px) and (max-width:900px) {
+    .input{
+        width: 90%
+    }
+    .input__box{
+        padding-left: 25px;
+    }
+    .icon{
+        left: 91%;
+    }
 }

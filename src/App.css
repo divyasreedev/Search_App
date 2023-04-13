@@ -1,5 +1,10 @@
+*{
+  padding: 0px;
+  margin: 0px;
+}
 .App{
   background-color: #E6E1E1;
+  /* height: fit-content; */
 }
 /* .App {
   text-align: center;
