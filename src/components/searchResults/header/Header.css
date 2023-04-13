@@ -1,0 +1,16 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    margin: 35px 0px;
+}
+.header__searchBar{
+    align-self: center;
+    width: 50%;
+    margin-left: 90px;
+}
+.header__logo{
+    width: 75px;
+    align-self: center;
+    margin-right: 40px;
+}

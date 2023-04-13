@@ -1,13 +1,17 @@
 import React, { Fragment } from 'react';
 import './App.css';
-//import SearchBar from './components/searchBar/SearchBar';
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import Home from './components/home/Home';
+import SearchResults from './components/searchResults/SearchResults';
 
 const App: React.FC = () => {
     return (
-      <Fragment>
-        <Home/>
-      </Fragment>
+      <div className='App'>
+        <Routes>
+          <Route path='/searchResults' Component={SearchResults}></Route>
+          <Route path='/' Component={Home}></Route>
+        </Routes>
+      </div>
     );
 };
 

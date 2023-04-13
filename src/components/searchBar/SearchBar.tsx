@@ -1,5 +1,6 @@
-import React from 'react'
-import './SearchBar.css'
+import React, {useState}from 'react';
+import './SearchBar.css';
+import { useNavigate } from 'react-router-dom';
 
 interface props_type{
   setText:(val:string) => void; //function
@@ -8,18 +9,24 @@ interface props_type{
 }
 
 const SearchBar = (props:props_type) => {
+  const navigate = useNavigate();
+  const [searchText, setSearchText] = useState<string>(''); 
   
   const handleChange = (e:any):void=>{
-    console.log(e);
+    setSearchText(e.target.value)
     props.setText(e.target.value);
   }
 
   const handleSubmit = ():void => {
-
+    if(searchText.length > 0){
+      navigate({
+        pathname: '/searchResults',
+        search:`?text=${searchText}`
+      });
+    }
   }
 
   const handleClick = ():void => {
-    // props.setClick(true);
     props.setIsVisible(true);
   }
   
@@ -27,7 +34,7 @@ const SearchBar = (props:props_type) => {
     <div className='searchBar'>
         <form className="input">
             <input type="input" placeholder="Search" className="input__box" onChange={e => handleChange(e)}  onClick = {e => handleClick()} />
-            <img src="magnifying-glass.png" alt="" className='icon'/>
+            <img src="magnifying-glass.png" alt="" className='icon' onClick = {e => handleSubmit()}/>
         </form>
     </div>
   )
