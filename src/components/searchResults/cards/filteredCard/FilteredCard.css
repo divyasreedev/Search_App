@@ -32,13 +32,14 @@
 .oldPrice{
     text-decoration: line-through;
     font-size: 12px;
-    font-weight: 300;
+    font-weight: 500;
+    color: #BFBFBF
 }
 
 .newPrice{
     font-size: 12px;
-    font-weight: 300;
-    color: #ACB9FF;
+    font-weight: 700;
+    color: #6E84FF;
 }
 
 .filteredCard__p3{
