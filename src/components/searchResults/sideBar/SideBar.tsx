@@ -4,7 +4,6 @@ import './SideBar.css'
 const SideBar = () => {
     var DropDown = new Array(3).fill(false);
     const handleDropDown = (dropDownType:string, index:number):void => {
-        console.log(dropDownType, index)
         DropDown[index] = !DropDown[index];
         var img:any = document.getElementsByClassName(dropDownType);
         var element:any = document.getElementsByClassName(dropDownType + 'DropDown');

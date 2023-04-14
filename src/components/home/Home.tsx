@@ -7,9 +7,7 @@ const Home:React.FC = () => {
   const [searchText, setSearchText] = useState<string> ('');
   const [isVisible, setIsVisible] = useState<boolean> (false);
 
-  useEffect(()=>{
-    console.log(searchText);
-  },[searchText]);
+  useEffect(()=>{},[searchText]);
 
   return (
     <div className="home">

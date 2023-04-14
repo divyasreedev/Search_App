@@ -3,8 +3,7 @@ import './SearchBar.css';
 import { useNavigate } from 'react-router-dom';
 
 interface props_type{
-  setText:(val:string) => void; //function
-  // setClick:(val:boolean) => void;
+  setText:(val:string) => void; 
   setIsVisible:(val:boolean) => void;
 }
 
@@ -15,6 +14,12 @@ const SearchBar = (props:props_type) => {
   const handleChange = (e:any):void=>{
     setSearchText(e.target.value)
     props.setText(e.target.value);
+    var img: any = document.getElementsByClassName('icon')[0];
+    if(e.target.value.length>0){
+      img.src = 'magnifying-glass-hover.png';
+    }else{
+      img.src = 'magnifying-glass.png';
+    }
   }
 
   const handleSubmit = ():void => {

@@ -2,16 +2,6 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 }
-/* .filterdCards__row1{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-.filterdCards__row1{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-} */
 
 @media screen and (min-width:750px) and (max-width:1000px) {
     .filteredCards {
