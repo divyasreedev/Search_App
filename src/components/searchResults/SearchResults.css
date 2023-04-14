@@ -1,0 +1,29 @@
+.searchResults__section{
+    display: flex;
+}
+
+.searchResults__heading{
+    font-size: xx-large;
+    font-weight: 400;
+    margin: 22px 31px;
+}
+
+.searchResults__rightSection{
+    margin: auto;
+}
+
+@media screen and (max-width:1180px) {
+    .searchResults__section{
+        flex-direction: column;
+    }
+    .searchResults__rightSection{
+        margin-top: 50px;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .searchResults__leftSection{
+        align-self: flex-start;
+        width:80%
+    }
+}

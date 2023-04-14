@@ -13,12 +13,13 @@ const FilteredCard = (props:props_type) => {
 
   const handleLike = ():void => {
     clicked = !clicked;
+    var img:any;
     if(clicked){
-      var img:any = document.getElementsByClassName('like');
+      img = document.getElementsByClassName('like');
       img[props.imgId].src = 'redLike.png'
     }
     else{
-      var img:any = document.getElementsByClassName('like');
+      img = document.getElementsByClassName('like');
       img[props.imgId].src = 'like.png'
     }
   }

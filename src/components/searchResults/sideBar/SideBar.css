@@ -1,13 +1,13 @@
-.sideBar__heading{
-    font-size: xx-large;
-    font-weight: 400;
-    margin: 22px 9px;
+.sideBar{
+    width:250px;
+    margin: 0px 24px;
 }
 
 .sideBar__section{
     display: flex;
     justify-content: space-between;
     margin: 10px 9px;
+    width: 190px;
 }
 
 .checkBox{
@@ -22,6 +22,12 @@
 .verticalLine{
     border: 1px solid rgb(230, 226, 226);
     margin: 15px 9px;
+    width: 200px;
+}
+
+.arrow{
+    width:12px;
+    height: 12px;
 }
 
 .star{
@@ -32,4 +38,43 @@
 
 .checked{ 
     color: #FDD33D;
+}
+
+.hidden{
+    display: none;
+}
+
+@media screen and (min-width: 800px) and (max-width:1180px) {
+    .sideBar{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .sideBar__section{
+        align-self: center;
+    }
+
+    .verticalLine{
+        width: 0px;
+        height: 0px;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .sideBar{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sideBar__section{
+        margin: 0px 9px;
+        align-self: center;
+        width: 100%;
+    }
+
+    .verticalLine{
+        width: 100%;
+    }
 }

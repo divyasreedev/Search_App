@@ -2,15 +2,23 @@ import React from 'react'
 import './SideBar.css'
 
 const SideBar = () => {
+    var DropDown = new Array(3).fill(false);
+    const handleDropDown = (dropDownType:string, index:number):void => {
+        console.log(dropDownType, index)
+        DropDown[index] = !DropDown[index];
+        var img:any = document.getElementsByClassName(dropDownType);
+        var element:any = document.getElementsByClassName(dropDownType + 'DropDown');
+        DropDown[index] ? img[0].src = 'right-arrow.png' : img[0].src = 'down-arrow.png';
+        DropDown[index] ? element[0].classList.add("hidden") : element[0].classList.remove("hidden");
+    }
   return (
     <div className='sideBar'>
-        <h1 className='sideBar__heading'>Search Results</h1>
-        <div className='sideBar__brand'>
+        <div className='sideBar__brand flex'>
             <div className="sideBar__section">
                 <p>BRAND</p>
-                <img src="down-arrow.png" alt="Down Arrow" />
+                <img src="down-arrow.png" alt="Down Arrow" className='brand arrow' onClick={()=> handleDropDown('brand', 0)}/>
             </div>
-            <div className='sideBar__dropdown'>
+            <div className='sideBar__dropdown brandDropDown'>
                 <input type="checkbox" id='mango' className='checkBox' name='mango' value={'mango'}/>
                 <label htmlFor="mango" className='checkBoxLabel'>Mango</label><br />
                 <input type="checkbox" id='h&m' className='checkBox' name='h&m' value={'h&m'}/>
@@ -18,12 +26,12 @@ const SideBar = () => {
             </div>
         </div>
         <div className='verticalLine'></div>
-        <div className='sideBar__priceRange'>
+        <div className='sideBar__priceRange flex'>
             <div className="sideBar__section">
                 <p>PRICE RANGE</p>
-                <img src="down-arrow.png" alt="Down Arrow" />
+                <img src="down-arrow.png" alt="Down Arrow" className='price arrow' onClick={()=> handleDropDown('price', 1)}/>
             </div>
-            <div className='sideBar__dropdown'>
+            <div className='sideBar__dropdown priceDropDown'>
                 <input type="checkbox" id='p1' className='checkBox' name='p1' value={'p1'}/>
                 <label htmlFor="p1" className='checkBoxLabel'>Under 500</label><br />
                 <input type="checkbox" id='p2' className='checkBox' name='p2' value={'p2'}/>
@@ -31,12 +39,12 @@ const SideBar = () => {
             </div>
         </div>
         <div className='verticalLine'></div>
-        <div className='sideBar__ratings'>
+        <div className='sideBar__ratings flex'>
             <div className="sideBar__section">
                 <p>RATINGS</p>
-                <img src="down-arrow.png" alt="Down Arrow" />
+                <img src="down-arrow.png" alt="Down Arrow" className='rating arrow' onClick={()=> handleDropDown('rating', 2)}/>
             </div>
-            <div className='sideBar__dropdown'>
+            <div className='sideBar__dropdown ratingDropDown'>
                 <input type="checkbox" id='5star' className='checkBox' name='5star' value={'5star'}/>
                 <label htmlFor="5star">
                     <span className="sideBar__p3">

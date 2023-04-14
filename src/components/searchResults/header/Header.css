@@ -14,3 +14,21 @@
     align-self: center;
     margin-right: 40px;
 }
+
+@media screen and (max-width:800px) {
+    .header__searchBar{
+        justify-content: flex-start;
+        width: 60%;
+        margin-left: 0px;
+    }
+    .header__logo{
+        width:50px;
+        margin: 20px 15px;
+    }
+}
+@media screen and (min-width: 600px) and (max-width:900px) {
+    .header__logo{
+        width:65px;
+        margin: 25px 25px;
+    }
+}
